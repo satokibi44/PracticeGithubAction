@@ -74,6 +74,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: spot-ecs
-        cluster: spot-ecs
+        service: nginx
+        cluster: nginx
         wait-for-service-stability: true
