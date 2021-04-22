@@ -1,5 +1,7 @@
 {
     "family": "nginx",
+    "taskRoleArn": "arn:aws:iam::719378226820:role/ECSTaskRole",
+    "executionRoleArn": "arn:aws:iam::719378226820:role/ECSTaskRole",
     "networkMode": "awsvpc",
     "containerDefinitions": [
         {
@@ -12,7 +14,13 @@
                     "protocol": "tcp"
                 }
             ],
-            "essential": true
+            "essential": true,
+            "secrets": [
+                {
+                    "name": "APP_WORD",
+                    "valueFrom": "arn:aws:ssm:us-east-2:719378226820:parameter/APP_WORD"
+                }
+            ]
         }
     ],
     "requiresCompatibilities": [
