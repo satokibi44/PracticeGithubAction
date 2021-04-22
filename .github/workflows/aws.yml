@@ -74,6 +74,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: nginx2
-        cluster: nginx
+        service: kusorep-cluster-nginx
+        cluster: kusorep-cluster
         wait-for-service-stability: true

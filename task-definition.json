@@ -6,7 +6,7 @@
     "containerDefinitions": [
         {
             "name": "nginx",
-            "image": "nginx",
+            "image": "719378226820.dkr.ecr.us-east-2.amazonaws.com/githubactions-nginx:latest",
             "portMappings": [
                 {
                     "containerPort": 80,
@@ -14,19 +14,12 @@
                     "protocol": "tcp"
                 }
             ],
-            "essential": true,
-            "secrets": [
-                {
-                    "name": "APP_WORD",
-                    "valueFrom": "arn:aws:ssm:us-east-2:719378226820:parameter/APP_WORD"
-                }
-            ]
+            "essential": true
         }
     ],
     "requiresCompatibilities": [
         "FARGATE"
     ],
-    "executionRoleArn": "ecsTaskExecutionRole",
     "cpu": "256",
     "memory": "512"
 }
