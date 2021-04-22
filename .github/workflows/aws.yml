@@ -68,7 +68,7 @@ jobs:
       with:
         task-definition: task-definition.json
         container-name: nginx
-        image: ${{ steps.build-image.outputs.image }}
+        image: 719378226820.dkr.ecr.us-east-2.amazonaws.com/githubactions-nginx:latest
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
