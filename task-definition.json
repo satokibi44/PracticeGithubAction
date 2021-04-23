@@ -5,8 +5,8 @@
     "networkMode": "awsvpc",
     "containerDefinitions": [
         {
-            "name": "nginx",
-            "image": "nginx",
+            "name": "nginx/docker",
+            "image": "nginx/docker",
             "portMappings": [
                 {
                     "containerPort": 8000,
