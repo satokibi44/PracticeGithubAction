@@ -6,7 +6,7 @@
     "containerDefinitions": [
         {
             "name": "nginx",
-            "image": "719378226820.dkr.ecr.us-east-2.amazonaws.com/githubactions-nginx:latest",
+            "image": "nginx",
             "portMappings": [
                 {
                     "containerPort": 80,
