@@ -5,7 +5,7 @@
     "networkMode": "awsvpc",
     "containerDefinitions": [
         {
-            "name": "nginx/docker",
+            "name": "nginx-docker",
             "image": "nginx/docker",
             "portMappings": [
                 {
